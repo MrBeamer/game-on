@@ -1,0 +1,9 @@
+<h1>Rentals#new</h1>
+<p>Find me in app/views/rentals/new.html.erb</p>
+
+<%= simple_form_for([@game, @rental]) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+
+  <%= f.submit "Submit Rental", class: "btn btn-primary" %>
+<% end %>
