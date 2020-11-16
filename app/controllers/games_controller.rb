@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   before_action :single_game, only: [:show, :edit, :update, :destroy]
-  
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @games = Game.all
   end
@@ -42,7 +43,7 @@ class GamesController < ApplicationController
   def game_params
     params.require(:game).permit(:title, :description, :price_per_day, :category, :condition, :availability)
   end
-  
+
   def single_game
     @game = Game.find(params[:id])
   end
