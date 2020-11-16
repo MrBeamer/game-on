@@ -1,2 +1,23 @@
 <h1>Games#show</h1>
 <p>Find me in app/views/games/show.html.erb</p>
+
+<%= @game.title %>
+<br>
+<%= @game.description %>
+<br>
+<%= @game.price_per_day %>
+<br>
+<%= @game.category %>
+<br>
+<%= @game.condition %>
+<br>
+
+<% if @game.availability%>
+  <p><%= "available" %></p>
+<% else %>
+  <p><%= "unavailable" %></p>
+<% end %>
+
+<%= link_to "back", games_path %>
+
+
