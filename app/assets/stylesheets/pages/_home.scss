@@ -1,1 +1,27 @@
 // Specific CSS for your home-page
+.search-home {
+display: flex;
+}
+
+.fa-search {
+  font-size: 16px;
+}
+
+.search-home button {
+padding: 2px;
+padding-top: 0px;
+margin-top: 0px;
+color: white;
+}
+
+.search-home input {
+margin-top: 5px;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
