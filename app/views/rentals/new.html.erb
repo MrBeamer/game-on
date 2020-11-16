@@ -4,6 +4,7 @@
 <%= simple_form_for([@game, @rental]) do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-
   <%= f.submit "Submit Rental", class: "btn btn-primary" %>
 <% end %>
+
+<%# @game.availability = false, aber hat nicht geklappt %>
