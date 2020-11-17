@@ -12,7 +12,7 @@ puts 'Cleaning database now...'
 puts 'Database clean ✅'
 
 10.times do
-    Game.create(
+    Game.create!(
     title: Faker::Game.title,
     category: Faker::Game.genre,
     description: Faker::TvShows::RickAndMorty.quote,
