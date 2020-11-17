@@ -1,7 +1,10 @@
 class ReviewPolicy < ApplicationPolicy
-  class Scope < Scope
-    def resolve
-      scope.all
+      def create?
+      return true
     end
-  end
+
+    def show?
+      return true
+    end
+
 end

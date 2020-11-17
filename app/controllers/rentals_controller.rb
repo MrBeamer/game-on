@@ -1,5 +1,9 @@
 class RentalsController < ApplicationController
-  before_action :single_rental
+  before_action :single_rental, except: [:index]
+
+  def index
+    @rental = Rental.last
+  end
 
   def new
     @rental = Rental.new
