@@ -3,18 +3,22 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :home]
 
   def index
-    @games = Game.all
+    # @games = Game.all
+    @games = policy_scope(Game).order(created_at: :desc)
   end
 
   def show
+    authorize @game
   end
 
   def new
     @game = Game.new
+    authorize @game
   end
 
   def create
     @game = Game.new(game_params)
+    authorize @game
     @game.user = current_user
     if @game.save
       redirect_to @game
@@ -27,6 +31,7 @@ class GamesController < ApplicationController
   end
 
   def update
+    authorize @game
     if @game.update(game_params)
       redirect_to @game
     else
