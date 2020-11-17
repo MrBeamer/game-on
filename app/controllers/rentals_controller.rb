@@ -12,14 +12,16 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rental_params)
-    authorize @rental
     @rental.user = current_user
     @rental.game = @game
+    authorize @game
+    authorize @rental
     # @rental.game.availability = false
     @game.availability = false
     if @rental.save && @game.save
       redirect_to game_path(@game)
     else
+      raise
       render :new
     end
   end
