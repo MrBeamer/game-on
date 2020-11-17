@@ -1,0 +1,31 @@
+
+  .show-box {
+    margin-top: 10rem;
+    margin-left: 10rem;
+    }
+    
+  .title {
+    display: flex;
+  }
+
+  #available{
+    background-color: green;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: white;
+    margin-top: 11px;
+    margin-left: 10px;
+  }
+
+  #unavailable{
+    background-color: red;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: white;
+    margin-top: 11px;
+    margin-left: 10px;
+  }
+
+  .links {
+    display: flex;
+  }

@@ -1,5 +1,6 @@
 
 <h1 class="mt-3 text-center">Discover our <strong> GAMING </strong> universe</h1>
+<div class="index-box">
 
 <div class="cards">
   <% @games.each do |game| %>
@@ -10,5 +11,6 @@
   <% end  %>
 </div>
 
+</div>
 
-
+<%= link_to "All Reviews", reviews_path %>

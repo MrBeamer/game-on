@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   resources :games do
     resources :rentals, only: [:new, :create] do
-      resources :reviews, only: [:new, :create]
     end
   end
-
-  resources :reviews, only: [:destroy]
-
+  resources :reviews, only: [:index]
+  resources :rentals, only: [:index] do
+    resources :reviews, only: [:new, :create]
+  end
 end

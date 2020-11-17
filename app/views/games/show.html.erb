@@ -1,25 +1,37 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<div class="show-box">
 
-<%= @game.title %>
-<br>
-<%= @game.description %>
-<br>
-<%= @game.price_per_day %>
+<div class="title">
+  <div>
+    <h1><%= @game.title %></h1>
+  </div>
+  <div>
+    <% if @game.availability%>
+      <p id="available"><%= "available" %></p>
+    <% else %>
+      <p id="unavailable"><%= "unavailable" %></p>
+    <% end %>
+  </div>
+</div>
+
 <br>
 <%= @game.category %>
 <br>
 <%= @game.condition %>
 <br>
+<%= @game.price_per_day %>
+<br>
+<%= @game.description %>
+<br>
 
-<% if @game.availability%>
-  <p><%= "available" %></p>
-<% else %>
-  <p><%= "unavailable" %></p>
-<% end %>
+<div class = "links">
+  <div class="button">
+    <%= link_to "back", games_path %>
+  </div>
+  <div class="button">
+    <%= link_to "Rent Game", new_game_rental_path(@game) %>
+  </div>
+</div>
 
-<%= link_to "back", games_path %>
 
-<%= link_to "Rent Game", new_game_rental_path(@game) %>
-
+</div>
 

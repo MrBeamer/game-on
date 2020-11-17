@@ -1,2 +1,16 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
+
+
+.index-box {
+margin-top: 100px;
+margin-left: 50px;
+}
+
+.show-new {
+  margin-top: 200px;
+  margin-left: 200px !important;
+  }
+
+
