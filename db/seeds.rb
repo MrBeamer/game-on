@@ -9,22 +9,22 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database now...'
 Game.destroy_all
-User.destroy_all
+# User.destroy_all
 puts 'Database clean ✅'
 
-User.create!(
-  email: "easy@email.com",
-  password: "password"
-)
+# User.create!(
+#   email: "easy@email.com",
+#   password: "password"
+# )
 
 Game.create!(
     title: "World of Warcraft",
     category: "Massively multiplayer online role-playing game",
     description: "World of Warcraft is a massively multiplayer online role-playing game released in 2004 by Blizzard Entertainment. It is the fourth released game set in the Warcraft fantasy universe.",
     price_per_day: 7,
-    condition: "low",
+    condition: "used",
     user: User.last
-  
+
   )
 
   Game.create!(
@@ -41,7 +41,7 @@ Game.create!(
     category:  "OpenWorldSpiel",
     description: "Minecraft is a sandbox video game developed by Mojang. The game was created by Markus Persson in the Java programming language.",
     price_per_day: 3,
-    condition: "new",
+    condition: "used",
     user: User.last
   )
 
@@ -59,7 +59,7 @@ Game.create!(
     category: "First-person shooter",
     description: "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video game developed by Treyarch and Raven Software and published by Activision. It is the sixth installment in the Black Ops series, and the seventeenth installment in the overall Call of Duty series.",
     price_per_day: 4,
-    condition: "medium",
+    condition: "used",
     user: User.last
   )
 
@@ -68,7 +68,7 @@ Game.create!(
     category: "First-person shooter",
     description: "Counter-Strike is a series of multiplayer first-person shooter video games in which teams of terrorists battle to perpetrate an act of terror while counter-terrorists try to prevent it. The series began on Windows in 1999 with the release of the first game, Counter-Strike.",
     price_per_day: 4,
-    condition: "medium",
+    condition: "new",
     user: User.last
   )
 
@@ -77,7 +77,7 @@ Game.create!(
     category: "Multiplayer online battle arena",
     description: "League of Legends is a 2009 multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows and macOS. Originally inspired by Defense of the Ancients, the game has followed a freemium model since its release on October 27, 2009.",
     price_per_day: 4,
-    condition: "new",
+    condition: "used",
     user: User.last
   )
 
@@ -86,7 +86,7 @@ Game.create!(
     category: "Life simulation game",
     description: "The Sims is a strategic life simulation video game developed by Maxis and published by Electronic Arts in 2000. It is a simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Players control customizable Sims as they pursue career and relationship goals.",
     price_per_day: 4,
-    condition: "medium",
+    condition: "new",
     user: User.last
   )
 
@@ -95,7 +95,7 @@ Game.create!(
     category: "Sports video game",
     description: "Pong is a table tennis-themed arcade video game, featuring simple two-dimensional graphics, manufactured by Atari and originally released in 1972.",
     price_per_day: 8,
-    condition: "medium",
+    condition: "used",
     user: User.last
   )
 
