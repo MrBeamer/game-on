@@ -1,4 +1,5 @@
-<div class="show-box">
+<div class="image-content">
+  <div class="show-box">
 
 <div class="title">
   <div>
@@ -13,14 +14,12 @@
   </div>
 </div>
 
-<br>
-<%= @game.category %>
-<br>
-<%= @game.condition %>
-<br>
-<%= @game.price_per_day %>
-<br>
-<%= @game.description %>
+<p><strong>Category:</strong> <%= @game.category %> </p>
+<p><strong>Condition:</strong> <%= @game.condition %> </p>
+<p><strong>Price per day:</strong> <%=@game.price_per_day%> $</p>
+<p><strong>Description:</strong></p>
+<p class="description-text"> <%= @game.description %> </p>
+
 <br>
 
 <div class = "links">
@@ -32,6 +31,14 @@
   </div>
 </div>
 
+</div>
+
+<div class="show-image">
+<img src="https://images5.alphacoders.com/956/956312.png" alt="super mario">
+</div>
 
 </div>
+
+
+
 
