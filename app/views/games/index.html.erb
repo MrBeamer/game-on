@@ -1,12 +1,11 @@
 
-<h1 class="mt-3 text-center">Discover our <strong> GAMING </strong> universe</h1>
+<h1 class="text-center headline-index">Discover a New Universe of Gaming</h1>
 <div class="index-box">
 
 <div class="cards">
   <% @games.each do |game| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1599409284444-d61f3797e72f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.redd.it/d5g2jaawgw431.jpg)">
       <h1 class="game-title"> <%= link_to game.title, game_path(game) %> </h1>
-      <p class="game-desrciption"> <%= game.description.truncate(150) %> </p>
     </div>
   <% end  %>
 </div>
