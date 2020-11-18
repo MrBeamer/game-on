@@ -1,11 +1,14 @@
 
   .show-box {
     margin-top: 10rem;
-    margin-left: 10rem;
+    margin-left: 50px;
+    margin-right: 40px;
+    margin-bottom: 50px;
     }
-    
+
   .title {
     display: flex;
+    margin-bottom: 15px;
   }
 
   #available{
@@ -29,3 +32,32 @@
   .links {
     display: flex;
   }
+
+.description-text {
+// width: 50%;
+}
+
+.show-image {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-top:  170px;
+  margin-right: 100px;
+
+
+  // margin-left: 50px;
+
+  img{
+    object-fit: cover;
+    height: 390px;
+    border-radius: 5px;
+  }
+}
+
+
+
+
+.image-content {
+  display: flex;
+  padding-bottom: 200px;
+}
