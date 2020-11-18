@@ -18,17 +18,9 @@ h1 {
 .navbar {
   // background-color: #e9ecef;
   background-color: transparent !important;
+  position: absolute;
+  z-index: 2004;
 }
-
-// footer
-// .fixed-top {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   z-index: 1030;
-// }
-
 
 
 // banner
@@ -72,8 +64,7 @@ text-align: center;
 .fa-pied-piper-alt {
 color: #f8f9fa;
 font-size: 50px;
-margin-left: 10px;
-margin-top: 10px;
+margin-left: 5px;
 }
 
 
