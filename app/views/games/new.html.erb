@@ -1,5 +1,8 @@
-<div class="form">
-   <h1>Create a new Game</h1>
+<body class="form-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/cGkdxIO.jpg);">
+
+  <div id="form-box" >
+ <div id="form-content" >
+   <h1>Add a new Game as Rental</h1>
 
 <%= simple_form_for(@game) do |f| %>
   <%= f.input :title %>
@@ -8,9 +11,12 @@
   <%= f.input :condition, collection: Game::STATUS %>
   <%= f.input :category %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit Game", class: "btn btn-primary" %>
+  <div class="btn-form">
+    <%= link_to "Back", game_path(@game) %>
+  </div>
+  <%= f.submit "Add Game", class: "btn-form" %>
 <% end %>
 
 </div>
-
-
+</div>
+</body>

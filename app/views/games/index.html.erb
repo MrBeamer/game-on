@@ -1,21 +1,46 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://i.imgur.com/NoMSBp7.jpg)">
+  <div >
+    <h1>Game ON</h1>
+    <i class="fab fa-pied-piper-alt"></i>
+    <p> <span id="banner-typed-text"></span></p>
+<div class="arrow-down">
+  <a href="#middle"><i class="fas fa-angle-down"></i></a>
+</div>
+  </div>
 
-<h1 class="text-center headline-index">Discover a New Universe of Gaming</h1>
+</div>
+<div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+
+<h1 class="text-center headline-index">Discover a new Game every Day</h1>
+
+<div class="seach-input">
+      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="search-form-control search-home form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="search-button"> Search </button>
+  </div>
+</form>
+
+</div>
+
+
 <div class="index-box">
-
-<div class="cards">
+<div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="cards">
   <% @games.each do |game| %>
     <% if game.photo.attached? %>
       <% background_url = cl_image_path game.photo.key, width: 500, height: 600, crop: :fill %>
     <% else %>
       <% background_url = 'https://i.redd.it/d5g2jaawgw431.jpg'%>
     <% end %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
+    <div id="middle" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
       <h1 class="game-title"> <%= link_to game.title, game_path(game) %> </h1>
     </div>
   <% end  %>
 </div>
+</div>
 
 </div>
+
 
 
 

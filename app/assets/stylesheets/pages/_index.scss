@@ -2,6 +2,35 @@
 @import "home";
 @import "show";
 @import "login";
+@import "new";
+// all sites
+body{
+  background-color: #f8f9fa !important;
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+// navbar
+
+.navbar {
+  // background-color: #e9ecef;
+  background-color: transparent !important;
+  position: absolute;
+  z-index: 2004;
+}
+
+
+// banner
+
+.banner-typed-text {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
 
 .index-box {
 margin-top: 50px;
@@ -10,11 +39,62 @@ margin-right: 50px;
 margin-bottom:200px;
 }
 
-.show-new {
-  margin-top: 200px;
-  margin-left: 200px !important;
-  }
 
 .headline-index {
 margin-top: 50px;
+margin-bottom: 40px;
+}
+
+
+.arrow-down {
+text-align: center;
+}
+
+.fa-angle-down {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+.fa-angle-down:hover {
+  opacity: 0.5;
+}
+
+
+.fa-pied-piper-alt {
+color: #f8f9fa;
+font-size: 50px;
+margin-left: 5px;
+}
+
+
+// search
+
+ .seach-input {
+  display: flex;
+  justify-content: center;
+ }
+
+.search-home {
+display: flex;
+}
+
+.search-button{
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+  background-color: #e9ecef;
+}
+
+.search-button:hover {
+  opacity: 0.7;
+}
+
+
+.search-home input {
+margin-top: 5px;
 }
