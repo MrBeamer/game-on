@@ -22,6 +22,14 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+import AOS from 'aos';
+
+AOS.init();
+
+AOS.init({
+  duration: 1200,
+})
+
 // External imports
 import "bootstrap";
 

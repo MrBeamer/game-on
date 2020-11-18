@@ -3,6 +3,33 @@
 @import "show";
 @import "login";
 
+// all sites
+body{
+  background-color: #f8f9fa !important;
+}
+
+
+// navbar
+
+.navbar {
+  background-color: #e9ecef;
+}
+
+// footer
+
+
+// .fixed-top {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   z-index: 1030;
+// }
+
+
+
+// banner
+
 .index-box {
 margin-top: 50px;
 margin-left: 50px;
@@ -10,11 +37,52 @@ margin-right: 50px;
 margin-bottom:200px;
 }
 
-.show-new {
-  margin-top: 200px;
-  margin-left: 200px !important;
-  }
 
 .headline-index {
 margin-top: 50px;
+}
+
+
+.arrow-down {
+text-align: center;
+}
+
+.fa-angle-down {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+.fa-angle-down:hover {
+  opacity: 0.5;
+}
+
+
+
+// search
+
+ .seach-input {
+  display: flex;
+  justify-content: center;
+ }
+
+.search-home {
+display: flex;
+}
+
+.search-button{
+border-radius: 5px;
+border: 1px solid black;
+color: black;
+}
+
+.search-home button {
+padding: 2px;
+padding-top: 0px;
+margin-top: 0px;
+color: white;
+}
+
+.search-home input {
+margin-top: 5px;
 }
