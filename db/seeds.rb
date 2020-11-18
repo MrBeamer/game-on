@@ -62,7 +62,7 @@ minecraft = Game.create!(
 minecraft.photo.attach(io: file, filename: 'minecraft.jpg', content_type: 'image/jpg')
 
 
-file = URI.open('https://images.alphacoders.com/988/988021.jpg')
+file = URI.open('https://images.unsplash.com/photo-1530692228265-084b21566b12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1252&q=80')
 
 cyberpunk = Game.create!(
     title: "Cyberpunk 2077",
