@@ -62,20 +62,18 @@ minecraft = Game.create!(
 minecraft.photo.attach(io: file, filename: 'minecraft.jpg', content_type: 'image/jpg')
 
 
-file = URI.open('https://images.unsplash.com/photo-1530692228265-084b21566b12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1252&q=80')
+# file = URI.open('https://images.unsplash.com/photo-1530692228265-084b21566b12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1252&q=80')
 
-cyberpunk = Game.create!(
-    title: "Cyberpunk 2077",
-    category: "Open World",
-    description: "Cyberpunk 2077 is an upcoming action role-playing video game developed and published by CD Projekt. It is scheduled to be released for Microsoft Windows, PlayStation 4, PlayStation 5, Stadia, Xbox One, and Xbox Series X/S on 10 December 2020.",
-    price_per_day: 4,
-    condition: "new",
-    user: User.last
-  )
+# cyberpunk = Game.create!(
+#     title: "Cyberpunk 2077",
+#     category: "Open World",
+#     description: "Cyberpunk 2077 is an upcoming action role-playing video game developed and published by CD Projekt. It is scheduled to be released for Microsoft Windows, PlayStation 4, PlayStation 5, Stadia, Xbox One, and Xbox Series X/S on 10 December 2020.",
+#     price_per_day: 4,
+#     condition: "new",
+#     user: User.last
+#   )
 
-cyberpunk.photo.attach(io: file, filename: 'cyberpunk.jpg', content_type: 'image/jpg')
-
-
+# cyberpunk.photo.attach(io: file, filename: 'cyberpunk.jpg', content_type: 'image/jpg')
 
 
 file = URI.open('https://c4.wallpaperflare.com/wallpaper/209/251/804/cod-mw-ghost-call-of-duty-hd-wallpaper-preview.jpg')
