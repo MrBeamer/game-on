@@ -29,12 +29,19 @@
   <div class="button">
     <%= link_to "Rent Game", new_game_rental_path(@game) %>
   </div>
+    <% if policy(@game).destroy?%>
+        <%= link_to "Delete", game_path(@game), method: :delete, data: { confirm: 'Delete this Game?'}, class: "show-button" %>
+    <% end %>
 </div>
 
 </div>
 
 <div class="show-image">
-<img src="https://images5.alphacoders.com/956/956312.png" alt="super mario">
+  <% if @game.photo.attached? %>
+    <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
+  <%else %>
+    <img src="https://images5.alphacoders.com/956/956312.png" alt="super mario">
+  <% end %>
 </div>
 
 </div>
