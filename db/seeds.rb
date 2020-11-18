@@ -8,14 +8,14 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database now...'
-# Game.destroy_all
-# User.destroy_all
+Game.destroy_all
+User.destroy_all
 puts 'Database clean ✅'
 
-# User.create!(
-#   email: "easy@email.com",
-#   password: "password"
-# )
+User.create!(
+  email: "easy@email.com",
+  password: "password"
+)
 
 Game.create!(
     title: "World of Warcraft",
