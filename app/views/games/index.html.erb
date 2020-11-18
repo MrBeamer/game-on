@@ -8,7 +8,7 @@
   </div>
 
 </div>
-
+<i class="fab fa-pied-piper-alt"></i>
 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 
 <h1 class="text-center headline-index">Discover a new Game every Day</h1>
@@ -24,7 +24,7 @@
 </div>
 
 
-<div id="middle" class="index-box">
+<div class="index-box">
 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="cards">
   <% @games.each do |game| %>
     <% if game.photo.attached? %>
@@ -32,7 +32,7 @@
     <% else %>
       <% background_url = 'https://i.redd.it/d5g2jaawgw431.jpg'%>
     <% end %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
+    <div id="middle" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
       <h1 class="game-title"> <%= link_to game.title, game_path(game) %> </h1>
     </div>
   <% end  %>

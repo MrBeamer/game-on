@@ -18,15 +18,7 @@ h1 {
 .navbar {
   // background-color: #e9ecef;
   background-color: transparent !important;
-  .fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
- }
 }
-
 
 // footer
 // .fixed-top {
@@ -58,7 +50,7 @@ margin-bottom:200px;
 
 .headline-index {
 margin-top: 50px;
-margin-bottom: 50px;
+margin-bottom: 40px;
 }
 
 
@@ -77,6 +69,13 @@ text-align: center;
 }
 
 
+.fa-pied-piper-alt {
+color: #f8f9fa;
+font-size: 50px;
+margin-left: 10px;
+margin-top: 10px;
+}
+
 
 // search
 
@@ -90,17 +89,20 @@ display: flex;
 }
 
 .search-button{
-border-radius: 5px;
-border: 1px solid black;
-color: black;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+  background-color: #e9ecef;
 }
 
-.search-home button {
-padding: 2px;
-padding-top: 0px;
-margin-top: 0px;
-color: white;
+.search-button:hover {
+  opacity: 0.7;
 }
+
 
 .search-home input {
 margin-top: 5px;
