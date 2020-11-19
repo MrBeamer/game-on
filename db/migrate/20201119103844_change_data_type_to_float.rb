@@ -1,6 +1,8 @@
 class ChangeDataTypeToFloat < ActiveRecord::Migration[6.0]
   def change
-   change_column :users, :latitude, :float
-   change_column :users, :longitude, :float
+   remove_column :users, :latitude
+   remove_column :users, :longitude
+   add_column :users, :latitude, :float
+   add_column :users, :longitude, :float
   end
 end
