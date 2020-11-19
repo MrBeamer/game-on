@@ -1,7 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
-@import "login";
 @import "new";
 // all sites
 body{
@@ -97,4 +96,16 @@ display: flex;
 
 .search-home input {
 margin-top: 5px;
+}
+
+/* If the screen size is 600px wide or less, then apply this settings */
+@media only screen and (max-width: 600px){
+
+.dropdown {
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  margin-top: 10px;
+}
+
 }

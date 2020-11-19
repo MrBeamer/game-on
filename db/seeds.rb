@@ -15,13 +15,19 @@ puts "hi"
 User.destroy_all
 puts 'Database clean ✅'
 
-User.create!(
-  email: "easy@email.com",
+dicaprio = User.create!(
+  name: "Leonardo DiCaprio"
+  address: "10243  Berlin, Am Wriezener Bahnhof",
+  email: "dicaprio@email.com",
   password: "password"
-  name: "Otto Normal"
-  address: "1000 Berlin, Regenbogen Str. 110"
 )
 
+nolan = User.create!(
+  name: "Christopher Nolan"
+  address: "10243  Berlin, Holzmarktstraße 25",
+  email: "nolan@email.com",
+  password: "password"
+)
 
 file = URI.open('http://s1.picswalls.com/wallpapers/2014/09/22/free-world-of-warcraft-wallpaper_044601312_250.jpg')
 
@@ -31,7 +37,7 @@ wow = Game.create!(
     description: "World of Warcraft is a massively multiplayer online role-playing game released in 2004 by Blizzard Entertainment. It is the fourth released game set in the Warcraft fantasy universe.",
     price_per_day: 7,
     condition: "used",
-    user: User.last
+    user: nolan
   )
   wow.photo.attach(io: file, filename: 'wow.jpg', content_type: 'image/jpg')
 
@@ -45,7 +51,7 @@ fortnite = Game.create!(
     description: "Fortnite is an online video game developed by Epic Games and released in 2017. It is available in three distinct game mode versions that otherwise share the same general gameplay and game engine",
     price_per_day: 2,
     condition: "new",
-    user: User.last
+    user: nolan
   )
 fortnite.photo.attach(io: file, filename: 'fortnite.jpg', content_type: 'image/jpg')
 
@@ -58,7 +64,7 @@ minecraft = Game.create!(
     description: "Minecraft is a sandbox video game developed by Mojang. The game was created by Markus Persson in the Java programming language.",
     price_per_day: 3,
     condition: "used",
-    user: User.last
+    user: nolan
   )
 
 minecraft.photo.attach(io: file, filename: 'minecraft.jpg', content_type: 'image/jpg')
@@ -86,7 +92,7 @@ duty = Game.create!(
     description: "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video game developed by Treyarch and Raven Software and published by Activision. It is the sixth installment in the Black Ops series, and the seventeenth installment in the overall Call of Duty series.",
     price_per_day: 4,
     condition: "used",
-    user: User.last
+    user: nolan
   )
 
 duty.photo.attach(io: file, filename: 'duty.jpg', content_type: 'image/jpg')
@@ -102,7 +108,7 @@ cs = Game.create!(
     description: "Counter-Strike is a series of multiplayer first-person shooter video games in which teams of terrorists battle to perpetrate an act of terror while counter-terrorists try to prevent it. The series began on Windows in 1999 with the release of the first game, Counter-Strike.",
     price_per_day: 4,
     condition: "new",
-    user: User.last
+    user: nolan
   )
 
 cs.photo.attach(io: file, filename: 'cs.jpg', content_type: 'image/jpg')
@@ -119,7 +125,7 @@ lol = Game.create!(
     description: "League of Legends is a 2009 multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows and macOS. Originally inspired by Defense of the Ancients, the game has followed a freemium model since its release on October 27, 2009.",
     price_per_day: 4,
     condition: "used",
-    user: User.last
+    user: dicaprio
   )
 
 
@@ -137,7 +143,7 @@ sims = Game.create!(
     description: "The Sims is a strategic life simulation video game developed by Maxis and published by Electronic Arts in 2000. It is a simulation of the daily activities of one or more virtual people in a suburban household near a fictional city. Players control customizable Sims as they pursue career and relationship goals.",
     price_per_day: 4,
     condition: "new",
-    user: User.last
+    user: dicaprio
   )
 
 sims.photo.attach(io: file, filename: 'sims.png', content_type: 'image/png')
@@ -152,7 +158,7 @@ pong = Game.create!(
     description: "Pong is a table tennis-themed arcade video game, featuring simple two-dimensional graphics, manufactured by Atari and originally released in 1972.",
     price_per_day: 8,
     condition: "used",
-    user: User.last
+    user: dicaprio
   )
 
 pong.photo.attach(io: file, filename: 'pong.jpg', content_type: 'image/jpg')

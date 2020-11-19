@@ -8,11 +8,24 @@
 }
 
 
-li .avatar-large {
-//margin-left: 1300px;
-margin-left: 200px;
-margin-top: 10px;
+.dropdown {
+  // position: absolute;
+  // top: 15px;
+  // left: 1350px;
+  // margin-top: 10px;
+}
 
+.dropdown-menu{
+position: absolute;
+  top: 15px;
+  left: 60px;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+
+.dropdown-item:hover{
+color: #6FE6E8;
 }
 
 .nav-link {
@@ -26,5 +39,6 @@ font-size: 19px;
 .nav-link:hover {
 opacity: 0.6 !important;
 }
+
 
 
