@@ -18,6 +18,8 @@ puts 'Database clean ✅'
 User.create!(
   email: "easy@email.com",
   password: "password"
+  name: "Otto Normal"
+  address: "1000 Berlin, Regenbogen Str. 110"
 )
 
 

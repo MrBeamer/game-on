@@ -1,1 +1,19 @@
-<%= link_to "Review a Rental", new_rental_review_path(@rental) %>
+<h1>Hello <%= @user.name %>!</h1>
+
+<h4>Your Rentals</h4>
+<p>These are all the rentals you made:</p>
+<ul>
+  <% @rentals.each do |rental| %>
+  <li><%= link_to rental.game.title, rental_path(rental) %></li>
+<% end %>
+</ul>
+
+<h4>My Games</h4>
+<p>These are all the games you offered:</p>
+
+<ul>
+  <% @user.games.each do |game| %>
+    <li><%= link_to game.title, game_path(game) %></li>
+  <% end %>
+</ul>
+
