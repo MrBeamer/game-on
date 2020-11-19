@@ -38,7 +38,7 @@
 
 <div class="show-image">
   <% if @game.photo.attached? %>
-    <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag @game.photo.key, height: 300, width: 500, crop: :fill %>
   <%else %>
     <img src="https://images5.alphacoders.com/956/956312.png" alt="super mario">
   <% end %>
