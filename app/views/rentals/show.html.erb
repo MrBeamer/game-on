@@ -1,1 +1,15 @@
-<h1>test rental</h1>
+<h1>Congratulations!</h1>
+
+<h4> You have succesfully rented <%= @rental.game.title %> from <%= @rental.start_date %> to <%= @rental.end_date %>.</h4>
+
+<h4>Details</h4>
+<p>Game: <%= @rental.game.title %></p>
+<p>Start Date: <%= @rental.start_date %></p>
+<p>Start Date: <%= @rental.end_date %></p>
+<p>Days Total: <%= @days_total %> </p>
+<p>Price Total: <%= @days_total.to_i * @game.price_per_day %>$</p>
+<p></p>
+
+<p>You can pick it up from <%= @user.name %> at <%= @user.address %>.</p>
+
+

@@ -1,11 +1,22 @@
 class RentalsController < ApplicationController
-  before_action :single_rental, except: [:index]
+  before_action :single_rental, except: [:index, :show]
 
   def index
-    @rental = Rental.last
+    @rentals = policy_scope(Rental).where(user: current_user).order(created_at: :desc)
+    @user = current_user
   end
 
   def show
+    @rental = Rental.find(params[:id])
+    authorize @rental
+    @game = @rental.game
+    @user = @rental.user
+  
+    @days_total = @rental.end_date - @rental.start_date
+    @days_total = @days_total.inspect.split("/")
+    @days_total = @days_total[0]
+    @days_total.slice! "("
+  
   end
 
   def new
@@ -19,11 +30,9 @@ class RentalsController < ApplicationController
     @rental.game = @game
     authorize @game
     authorize @rental
-    # @rental.game.availability = false
     @game.availability = false
     if @rental.save && @game.save
-      redirect_to game_path(@game)
-      # redirect_to game_rental_path
+      redirect_to rental_path(@rental)
     else
       render :new
     end
