@@ -5,6 +5,9 @@ class RentalsController < ApplicationController
     @rental = Rental.last
   end
 
+  def show
+  end
+
   def new
     @rental = Rental.new
     authorize @rental
@@ -20,8 +23,8 @@ class RentalsController < ApplicationController
     @game.availability = false
     if @rental.save && @game.save
       redirect_to game_path(@game)
+      # redirect_to game_rental_path
     else
-      raise
       render :new
     end
   end

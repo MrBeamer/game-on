@@ -3,24 +3,24 @@
     <h1>Game ON</h1>
     <i class="fab fa-pied-piper-alt"></i>
     <p> <span id="banner-typed-text"></span></p>
-<div class="arrow-down">
-  <a href="#middle"><i class="fas fa-angle-down"></i></a>
-</div>
+    <div class="arrow-down">
+      <a href="#middle"><i class="fas fa-angle-down"></i></a>
+    </div>
   </div>
-
 </div>
+
 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-
-<h1 class="text-center headline-index">Discover a new Game every Day</h1>
-
-<div class="seach-input">
-      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-  <div class="search-form-control search-home form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="search-button"> Search </button>
+  <h1 class="text-center headline-index">Discover a new Game every Day</h1>
+  <div class="seach-input form-inline">
+    <%= form_tag games_path, method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a Game"
+    %>
+    <%= submit_tag "Search", class: "search-button stop"%>
+    <% end %>
   </div>
-</form>
-
 </div>
 
 

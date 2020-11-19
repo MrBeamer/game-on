@@ -3,8 +3,12 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :home, :show]
 
   def index
-    # @games = Game.all
     @games = policy_scope(Game).order(created_at: :desc)
+    if params[:query].present?
+      @games = Game.search_by_title_and_condition(params[:query])
+
+    end
+    # redirect_to "/games#middle"
   end
 
   def show
