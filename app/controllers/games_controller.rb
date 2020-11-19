@@ -10,10 +10,10 @@ class GamesController < ApplicationController
   def show
     authorize @game
     @user = @game.user
-    @marker = { 
+    @marker = [ { 
       lat: @user.latitude,
       lng: @user.longitude
-      }
+      } ]
   end
 
   def new
