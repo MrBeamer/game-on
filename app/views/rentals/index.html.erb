@@ -1,39 +1,30 @@
 <body class="form-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/K5P5Twf.jpg);">
-
-<h1>Hello <%= @user.name %>!</h1>
-
-
-
-
-<div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    <h4>Your Rentals</h4>
-<p>These are all the rentals you made:</p>
-<ul>
-  <% @rentals.each do |rental| %>
-  <li><%= link_to rental.game.title, rental_path(rental) %></li>
-<% end %>
-</ul>
+  <div class="headline-profile">
+    <h1><%= @user.name  %>s Profile</h1>
   </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    <h4>My Games</h4>
-<p>These are all the games you offered:</p>
-
-<ul>
-  <% @user.games.each do |game| %>
-    <li><%= link_to game.title, game_path(game) %></li>
-  <% end %>
-</ul>
+  <div class="cards-profile">
+  <div class="card-category-profile" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    <h3 class="subline-profile">My Rentals:</h3>
+   <!--  <p>These are all the rentals you made:</p> -->
+    <ul>
+      <% @rentals.each do |rental| %>
+        <li><i class="fas fa-angle-right"></i><%= link_to rental.game.title, rental_path(rental) %></li>
+      <% end %>
+    </ul>
   </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    reviews
+  <div class="card-category-profile" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    <h3 class="subline-profile">My Games:</h3>
+    <!-- <p>These are all the games you offered:</p> -->
+    <ul>
+      <% @user.games.each do |game| %>
+        <li><i class="fas fa-angle-right"></i><%= link_to game.title, game_path(game) %></li>
+      <% end %>
+    </ul>
   </div>
-</div>
-
-
+  <div class="card-category-profile" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    <h3 class="subline-profile">My Reviews:</h3>
+  </div>
+  </div>
 </body>
 
-
-
+ <!--  -->

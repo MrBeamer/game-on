@@ -1,39 +1,29 @@
 <body class="form-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://free4kwallpapers.com/uploads/originals/2016/02/29/super-mario-maker-wallpaper.jpg);">
-
-
-
-
-
   <div id="form-box" >
- <div id="form-content" data-aos="zoom-in" ata-aos-duration="2500">
-<h2 class="headline"> <strong> You have succesfully rented <%= @rental.game.title %> from <%= @game.user.name %>.</strong></h2>
-
-<h4 class="subline"><strong>Details:</strong></h4>
-<p>Game: <%= @rental.game.title %></p>
-<hr>
-<p>Start Date: <%= @rental.start_date %></p>
-<hr>
-<p>End Date: <%= @rental.end_date %></p>
-<hr>
-<p>Days Total: <%= @days_total %> </p>
-<hr>
-<p>Price Total: <%= @days_total.to_i * @game.price_per_day %>$</p>
-<hr>
-
-<p>You can pick it up at <%= @game.user.address%>.</p>
-<hr>
-<div id="map"
+    <div id="form-content" data-aos="zoom-in" ata-aos-duration="2500">
+      <h2 class="headline"> <strong> You have succesfully rented <%= @rental.game.title %> from <%= @game.user.name %>.</strong></h2>
+      <h4 class="subline"><strong>Details:</strong></h4>
+      <p>Game: <%= @rental.game.title %></p>
+      <hr>
+      <p>Start Date: <%= @rental.start_date %></p>
+      <hr>
+      <p>End Date: <%= @rental.end_date %></p>
+      <hr>
+      <p>Days Total: <%= @days_total %> </p>
+      <hr>
+      <p>Price Total: <%= @days_total.to_i * @game.price_per_day %>$</p>
+      <hr>
+      <p>You can pick it up at <%= @game.user.address%>.</p>
+      <hr>
+    <div id="map"
       style="width: 100%; height: 400px;"
       data-markers="<%= @marker.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+    <hr>
+    <div class="btn-form">
+      <%= link_to "Find more", root_path %>
+    </div>
+    </div>
   </div>
-<hr>
- <div class="btn-form">
-    <%= link_to "Find more", root_path %>
-  </div>
-</div>
-
-</div>
-
-
 </body>
