@@ -1,5 +1,15 @@
+<body class="form-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/PT6YQGG.jpeg);">
+
+<div id="form-box" >
+ <div id="form-content" >
+   <h1>Leave a Review for </h1>
+
 <%= simple_form_for([@games, @review, @rental]) do |f| %>
 <%= f.input :rating, collection: Review::(1..5) %>
 <%= f.input :comment %>
-<%= f.submit class: "btn btn-danger" %>
+<%= f.submit class: "btn-form" %>
 <% end %>
+
+</div>
+</div>
+</body>
