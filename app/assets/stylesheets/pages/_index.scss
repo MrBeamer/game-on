@@ -1,8 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
-@import "login";
 @import "new";
+@import "_rental-show";
 // all sites
 body{
   background-color: #f8f9fa !important;
@@ -98,3 +98,24 @@ display: flex;
 .search-home input {
 margin-top: 5px;
 }
+
+/* If the screen size is 600px wide or less, then apply this settings */
+@media only screen and (max-width: 600px){
+
+.dropdown {
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  margin-top: 10px;
+}
+
+}
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+
+

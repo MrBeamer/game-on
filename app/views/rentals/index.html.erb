@@ -1,14 +1,23 @@
+<body class="form-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/K5P5Twf.jpg);">
+
 <h1>Hello <%= @user.name %>!</h1>
 
-<h4>Your Rentals</h4>
+
+
+
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    <h4>Your Rentals</h4>
 <p>These are all the rentals you made:</p>
 <ul>
   <% @rentals.each do |rental| %>
   <li><%= link_to rental.game.title, rental_path(rental) %></li>
 <% end %>
 </ul>
+  </div>
 
-<h4>My Games</h4>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    <h4>My Games</h4>
 <p>These are all the games you offered:</p>
 
 <ul>
@@ -16,4 +25,15 @@
     <li><%= link_to game.title, game_path(game) %></li>
   <% end %>
 </ul>
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    reviews
+  </div>
+</div>
+
+
+</body>
+
+
 
