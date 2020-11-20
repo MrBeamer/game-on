@@ -10,14 +10,14 @@ class RentalsController < ApplicationController
     @rental = Rental.find(params[:id])
     authorize @rental
     @game = @rental.game
-    @user = @rental.user
-  
+    @user = @game.user
+
     @days_total = @rental.end_date - @rental.start_date
     @days_total = @days_total.inspect.split("/")
     @days_total = @days_total[0]
     @days_total.slice! "("
-    
-    @marker = [ { 
+
+    @marker = [ {
       lat: @user.latitude,
       lng: @user.longitude
       } ]

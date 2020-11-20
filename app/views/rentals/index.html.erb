@@ -17,16 +17,17 @@
     <!-- <p>These are all the games you offered:</p> -->
     <ul>
       <% @user.games.each do |game| %>
-        <li><i class="fas fa-angle-right"></i><%= link_to game.title, game_path(game) %></li>
+        <li><i class="fas fa-angle-right"> </i><%= link_to game.title, game_path(game) %></li>
       <% end %>
     </ul>
   </div>
   <div class="card-category-profile" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    <h3 class="subline-profile">My Reviews:</h3>
-    <ul> 
+    <h3 class="subline-profile">My Reviews and Ratings:</h3>
+    <ul>
       <% @user.reviews.each do |review| %>
-        <li><%= review.comment %></li>
-        <li><%= review.rating %></li>
+        <li><i class="fas fa-angle-right"></i><%= review.rating %> of 5 Stars:</li>
+        <li> </i><%= review.comment %></li>
+        <hr>
       <% end %>
     </ul>
   </div>
