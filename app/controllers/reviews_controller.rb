@@ -9,14 +9,18 @@ before_action :single_rental, except: [:index]
     def new
       @review = Review.new
       authorize @review
+      @review.rental = @rental
+      @game = @rental.game
+      @user = @game.user
   end
 
   def create
     @review = Review.new(review_params)
     authorize @review
-    @review.user = current_user
     @review.rental = @rental
-    # @review.game = @game
+    @game = @rental.game
+    @user = @game.user
+    @review.user = @user
     if @review.save
       redirect_to game_path(@game)
     else

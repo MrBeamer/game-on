@@ -2,10 +2,10 @@
 
 <div id="form-box" >
  <div id="form-content" >
-   <h1>Leave a Review for </h1>
+   <h1>Leave a Review for <%=@user.name %></h1>
 
-<%= simple_form_for([@games, @review, @rental]) do |f| %>
-<%= f.input :rating, collection: Review::(1..5) %>
+<%= simple_form_for([@rental, @review]) do |f| %>
+<%= f.input :rating %>
 <%= f.input :comment %>
 <%= f.submit class: "btn-form" %>
 <% end %>
