@@ -46,11 +46,13 @@
 
 </div>
 <div>
-<h3 class="mt-5">User Reviews:</h3>
-    <ul> 
+<h3 class="reviews"> <%= @user.name %>s Reviews:</h3>
+    <ul>
       <% @user.reviews.each do |review| %>
+
+        <li> <%= review.rating %> stars out of 5:</li>
         <li><%= review.comment %></li>
-        <li><%= review.rating %></li>
+        <hr>
       <% end %>
     </ul>
   </div>
