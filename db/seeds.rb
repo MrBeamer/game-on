@@ -23,7 +23,7 @@ puts 'Database clean ✅'
 
 User.create!(
   name: "C.Nolan",
-  address: "10243  Berlin, Holzmarktstraße 25",
+  address: "Holzmarktstraße 25, 10243 Berlin",
   email: "nolan@email.com",
   password: "password"
 )
@@ -149,7 +149,7 @@ sims.photo.attach(io: file, filename: 'sims.png', content_type: 'image/png')
 
 
 
-file = URI.open('http://www.desktopimages.org/pictures/2016/0415/1/orig_466350.jpg')
+file = URI.open('https://images.unsplash.com/photo-1522617804560-8454764f1815?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80')
 
 pong = Game.create!(
     title: "Pong",
