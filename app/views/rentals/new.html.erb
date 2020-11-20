@@ -1,6 +1,6 @@
 <body class="form-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/cGkdxIO.jpg);">
 
-  <div id="form-box" >
+  <div id="form-box" data-aos="flip-down" data-aos-duration="1500">
  <div id="form-content" >
 <h1>Rent <%=@game.title %></h1>
 <%= simple_form_for([@game, @rental]) do |f| %>
