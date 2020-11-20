@@ -43,7 +43,18 @@
     <img src="https://images5.alphacoders.com/956/956312.png" alt="super mario">
   <% end %>
 </div>
+
 </div>
+<div>
+<h3 class="mt-5">User Reviews:</h3>
+    <ul> 
+      <% @user.reviews.each do |review| %>
+        <li><%= review.comment %></li>
+        <li><%= review.rating %></li>
+      <% end %>
+    </ul>
+  </div>
+
 
 
 
