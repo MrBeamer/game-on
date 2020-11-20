@@ -1,8 +1,8 @@
-
 .headline-profile {
 // margin-top: 50px;
   text-align: center;
   margin-top: 100px;
+  margin-left: 70px;
   background-size: cover;
   background-position: center;
   height: 50px;
@@ -11,6 +11,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr
 }
 
 

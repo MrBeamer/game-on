@@ -5,21 +5,11 @@
 @import "_rental-show";
 // all sites
 body{
-  background-color: #f8f9fa !important;
   font-family: 'Roboto Mono', monospace !important;
 }
 
 h1 {
   font-family: 'Roboto Mono', monospace !important;
-}
-
-// navbar
-
-.navbar {
-  // background-color: #e9ecef;
-  background-color: transparent !important;
-  position: absolute;
-  z-index: 2004;
 }
 
 
@@ -102,12 +92,6 @@ margin-top: 5px;
 /* If the screen size is 600px wide or less, then apply this settings */
 @media only screen and (max-width: 600px){
 
-.dropdown {
-  position: absolute;
-  top: 15px;
-  left: 100px;
-  margin-top: 10px;
-}
 
 }
 
