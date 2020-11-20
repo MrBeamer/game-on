@@ -16,7 +16,11 @@ class RentalsController < ApplicationController
     @days_total = @days_total.inspect.split("/")
     @days_total = @days_total[0]
     @days_total.slice! "("
-  
+    
+    @marker = [ { 
+      lat: @user.latitude,
+      lng: @user.longitude
+      } ]
   end
 
   def new
