@@ -1,24 +1,24 @@
 class ReviewsController < ApplicationController
 before_action :single_rental, except: [:index]
 
-
   def index
     @reviews = policy_scope(Review).order(created_at: :desc)
   end
 
     def new
       @review = Review.new
+      @review.rental = @rental
       authorize @review
   end
 
   def create
     @review = Review.new(review_params)
     authorize @review
-    @review.user = current_user
     @review.rental = @rental
-    # @review.game = @game
+    @rental.user = current_user
+    @rental.game = @game
     if @review.save
-      redirect_to game_path(@game)
+      redirect_to rentals_path
     else
       render :new
     end

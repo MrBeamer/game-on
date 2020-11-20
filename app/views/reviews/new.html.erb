@@ -1,5 +1,5 @@
-<%= simple_form_for([@games, @review, @rental]) do |f| %>
-<%= f.input :rating, collection: Review::(1..5) %>
+<%= simple_form_for([@rental, @review]) do |f| %>
+<%= f.input :rating, collection: Review::RANGE%>
 <%= f.input :comment %>
 <%= f.submit class: "btn btn-danger" %>
 <% end %>
