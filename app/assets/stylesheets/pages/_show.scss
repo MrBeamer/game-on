@@ -16,7 +16,7 @@
     margin-bottom: 50px;
     }
 
-    .show-new {
+.show-new {
   margin-top: 200px;
   margin-left: 200px !important;
   }
@@ -47,10 +47,6 @@
   .links {
     display: flex;
   }
-
-.description-text {
-// width: 50%;
-}
 
 .show-image {
   width: 50%;
@@ -94,5 +90,36 @@
 
 a {
   text-decoration: none;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+.show-image {
+  width: 10%;
+  display: inline-block;
+  text-align: center;
+  margin-top:  170px;
+  margin-right: 100px;
+  img{
+    object-fit: cover;
+    height: 390px;
+    width: 280px;
+    border-radius: 5px;
+  }
+}
+
+  .show-box {
+    margin-top: 10rem;
+    margin-left: 50px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    width: 50%;
+    }
+
+.image-content {
+  width: 380px;
+}
+
 }
 
