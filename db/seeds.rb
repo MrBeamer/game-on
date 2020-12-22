@@ -6,15 +6,18 @@ puts 'Cleaning database now...'
 Rental.destroy_all
 Game.destroy_all
 User.destroy_all
+Review.destroy_all
 puts 'Database clean ✅'
 
-
+# user
 User.create!(
   name: "C.Nolan",
   address: "Holzmarktstraße 25, 10243 Berlin",
   email: "nolan@email.com",
   password: "password"
 )
+
+# games
 
 file = URI.open('https://i.redd.it/d5g2jaawgw431.jpg')
 
@@ -99,5 +102,9 @@ sims = Game.create!(
 
 sims.photo.attach(io: file, filename: 'sims.png', content_type: 'image/png')
 
+# reviews
 
+  puts "Complete, created #{User.count} users."
   puts "Complete, created #{Game.count} games."
+  puts "Complete, created #{Rental.count} rentals."
+  puts "Complete, created #{Review.count} reviews."

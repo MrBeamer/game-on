@@ -3,13 +3,17 @@
   margin-bottom: 20px;
 }
 
+  .game-name h1{
+    word-spacing: -10px;
+}
+
   ul {
     list-style-type: none;
     margin-left: 10px;
   }
 
   .show-box {
-    margin-top: 10rem;
+    margin-top: 4rem;
     margin-left: 50px;
     margin-right: 40px;
     margin-bottom: 50px;
@@ -23,6 +27,7 @@
   .title {
     display: flex;
     margin-bottom: 15px;
+    margin-right: 20px;
   }
 
   #available{
@@ -48,11 +53,11 @@
   }
 
 .show-image {
-  width: 50%;
+  width: 100%;
   display: inline-block;
-  text-align: center;
-  margin-top:  170px;
-  margin-right: 100px;
+  // text-align: center;
+  margin-top:  5px;
+  margin-bottom:  20px;
 
   img{
     object-fit: cover;
@@ -64,6 +69,10 @@
 .image-content {
   display: flex;
   padding-bottom: 50px;
+}
+
+.description-text {
+  width: 70%;
 }
 
 .show-button {
@@ -92,7 +101,7 @@
   width: 20%;
   display: inline-block;
   text-align: center;
-  margin-top:  170px;
+  margin-bottom: 20px;
   margin-right: 100px;
   img{
     object-fit: cover;
@@ -103,16 +112,27 @@
 }
 
   .show-box {
-    margin-top: 10rem;
     margin-left: 50px;
     margin-right: 40px;
     margin-bottom: 50px;
     width: 100%;
     }
 
-// .image-content {
-//   width: 380px;
-// }
+.image-content {
+  width: 380px;
+}
+
+.description-text {
+  width: 80%;
+}
+
+ .title {
+  font-size: 13px;
+}
+
+  .game-name{
+    width: 53%;
+}
 
 }
 

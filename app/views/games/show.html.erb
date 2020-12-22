@@ -2,7 +2,7 @@
   <div class="show-box">
 
 <div class="title">
-  <div>
+  <div class="game-name">
     <h1><%= @game.title %></h1>
   </div>
   <div>
@@ -12,6 +12,15 @@
       <p id="unavailable"><%= "unavailable" %></p>
     <% end %>
   </div>
+</div>
+
+
+<div class="show-image">
+  <% if @game.photo.attached? %>
+    <%= cl_image_tag @game.photo.key, height: 300, width: 500, crop: :fill %>
+  <%else %>
+    <img src="https://images5.alphacoders.com/956/956312.png" alt="super mario">
+  <% end %>
 </div>
 
 <p><strong>Category:</strong> <%= @game.category %> </p>
@@ -31,13 +40,7 @@
 
 </div>
 
-<div class="show-image">
-  <% if @game.photo.attached? %>
-    <%= cl_image_tag @game.photo.key, height: 300, width: 500, crop: :fill %>
-  <%else %>
-    <img src="https://images5.alphacoders.com/956/956312.png" alt="super mario">
-  <% end %>
-</div>
+<!-- image was here-->
 
 </div>
 <div>
