@@ -6,7 +6,7 @@ class GamesController < ApplicationController
     @games = policy_scope(Game).order(created_at: :desc)
     if params[:query].present?
       @games = Game.search_by_title_and_availability(params[:query])
-      # redirect_to root_path(@game, anchor: "middle")
+      # redirect_to games_path(anchor: "middle")
     end
   end
 

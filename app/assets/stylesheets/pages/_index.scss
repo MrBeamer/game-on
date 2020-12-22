@@ -13,6 +13,11 @@ h1 {
 }
 
 
+// to fix overflow scrollbars in the mobile views !!!!
+body,html {
+overflow-x: hidden;
+}
+
 // banner
 
 .banner-typed-text {
@@ -84,15 +89,8 @@ display: flex;
   opacity: 0.7;
 }
 
-
 .search-home input {
 margin-top: 5px;
-}
-
-/* If the screen size is 600px wide or less, then apply this settings */
-@media only screen and (max-width: 600px){
-
-
 }
 
 .page-container {
@@ -100,6 +98,20 @@ margin-top: 5px;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
 }
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .subline-index {
+    word-spacing: -10px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .search-button {
+    margin-top: 18px;
+    margin-left: 60px;
+  }
+}
+
 
 
 

@@ -6,9 +6,6 @@
 <%= simple_form_for([@game, @rental]) do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-   <div class="btn-form">
-    <%= link_to "Back", game_path(@game) %>
-  </div>
   <%= f.submit "Submit Rental", class: "btn-form" %>
 <% end %>
 

@@ -1,7 +1,4 @@
 .banner {
-  background-size: cover;
-  background-position: center;
-  // padding: 200px 0;
   height: 100vh ;
   display: flex;
   align-items: center;
@@ -22,4 +19,18 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.background-banner {
+  background-size: cover;
+  background-position: center;
+  // padding: 200px 0;
+  height: 100vh ;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }

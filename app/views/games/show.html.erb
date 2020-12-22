@@ -23,12 +23,7 @@
 <br>
 
 <div class = "links">
-  <div class="button">
-    <%= link_to "back", games_path %>
-  </div>
-  <div class="button">
-    <%= link_to "Rent Game", new_game_rental_path(@game) %>
-  </div>
+    <%= link_to "Rent Game", new_game_rental_path(@game), class: "show-button"%>
     <% if policy(@game).destroy?%>
         <%= link_to "Delete", game_path(@game), method: :delete, data: { confirm: 'Delete this Game?'}, class: "show-button" %>
     <% end %>

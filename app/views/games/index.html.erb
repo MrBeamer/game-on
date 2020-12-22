@@ -1,22 +1,59 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://i.imgur.com/NoMSBp7.jpg)">
-  <div >
-    <h1>Game ON</h1>
-    <i class="fab fa-pied-piper-alt"></i>
-    <p> <span id="banner-typed-text"></span></p>
-    <div class="arrow-down">
-      <a href="#middle"><i class="fas fa-angle-down"></i></a>
+<div class="background-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://i.imgur.com/NoMSBp7.jpg)">
+  <div class="my-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark index-navbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <% if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to "Profile", rentals_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Discover Games", games_path, class: "nav-link"%>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Add a Game", new_game_path, class: "nav-link"%>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Discover Games", games_path, class: "nav-link"%>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="banner">
+    <div >
+      <h1>Game ON</h1>
+      <i class="fab fa-pied-piper-alt"></i>
+      <p> <span id="banner-typed-text"></span></p>
+      <div class="arrow-down">
+        <a href="#middle"><i class="fas fa-angle-down"></i></a>
+      </div>
     </div>
   </div>
 </div>
 
-<div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+<div class="subline-index" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
   <h1 class="text-center headline-index">Discover a new Game every Day</h1>
   <div class="seach-input form-inline">
     <%= form_tag games_path, method: :get do %>
     <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a Game"
+    placeholder: "Search for a Game"
     %>
     <%= submit_tag "Search", class: "search-button stop"%>
     <% end %>
@@ -24,7 +61,7 @@
 </div>
 
 <div class="index-box">
-  <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="cards">
+  <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="cards" id="middle">
     <% @games.each do |game| %>
       <% if game.photo.attached? %>
         <% background_url = cl_image_path game.photo.key, width: 700, height: 400, crop: :fill %>
