@@ -1,18 +1,14 @@
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-collapse {
+ flex-grow: 0;
 }
 
-
-
 .navbar {
-  background-color: transparent !important;
+  background-color: #e9ecef !important;
   &:hover {
     // background-color: #f8f9fa!important;
-    background-color: #e9ecef!important;
+    // background-color: #e9ecef!important;
     color: black;
   }
-
 }
 
    .dropdown-item {
@@ -24,10 +20,26 @@
   }
 
 .nav-link {
-  color:black;
+  color:black !important;
 }
 .nav-link:hover {
  text-decoration: none;
  color:black;
  opacity: 0.4;
+}
+
+// index navbar
+
+.index-navbar {
+  background-color: transparent !important;
+  color: white;
+}
+
+.index-navbar .nav-link {
+  color: white !important;
+}
+
+.nav-item {
+  justify-content: space-between !important;
+  margin-right: 30px;
 }

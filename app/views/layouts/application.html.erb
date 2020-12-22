@@ -10,24 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Mono:wght@100;200;400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
   <body>
-<div class="page-container"> <div class="navbar-container"><%= render "shared/navbar" %>
-  </div> <div class="content-container"><%= yield %>
+<div class="page-container">
+  <div class="navbar-container">
+    <% unless current_page?(games_path) %>
+      <%= render "shared/navbar" %>
+    <% end %>
   </div>
-  <div class="footer-container">  <%= render "shared/footer" %> </div>
+  <div class="content-container">
+    <%= yield %>
+    <%= render "shared/flashes" %>
+  </div>
+  <div class="footer-container">
+    <%= render "shared/footer" %>
+  </div>
 </div>
-
-
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
   </body>
 </html>
-
-
