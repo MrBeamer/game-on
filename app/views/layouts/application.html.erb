@@ -15,7 +15,7 @@
   <body>
 <div class="page-container">
   <div class="navbar-container">
-    <% unless current_page?(root_path || games_path)%>
+    <% unless current_page?(root_path) || current_page?(games_path)%>
       <%= render "shared/navbar" %>
     <% end %>
   </div>
