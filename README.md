@@ -2,7 +2,7 @@
 
 GameOn - Rent video games locally <br/>
 Add games to the marketplace, rent out games, find the location to pick up the game and give a review <br/>
-Look up your rented games and reviews in your profile,
+Look up your rented games and reviews in your profile.
 
 ---
 
